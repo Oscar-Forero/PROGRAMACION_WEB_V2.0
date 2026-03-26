@@ -1,0 +1,141 @@
+<!DOCTYPE html> <!-- Activa modo estricto (Strict Mode) -->
+<html lang="es"> <!-- Define idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Permite caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>Hoja de Vida</title> <!-- Título de la página -->
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body> <!-- Cuerpo de la página -->
+
+<div class="container"> <!-- Contenedor principal -->
+
+    <!-- =========================
+         MENÚ HORIZONTAL (LISTAS CSS)
+    ========================== -->
+    <ul class="menu"> <!-- Lista usada como menú -->
+        <li><a href="#">Inicio</a></li> <!-- Elemento del menú -->
+        <li><a href="#">Perfil</a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+            <a href="#">Más</a>
+            <ul class="dropdown-content"> <!-- Submenú oculto -->
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+    <div class="header"> <!-- Sección superior -->
+
+        <div class="info"> <!-- Información personal -->
+            <h1>Oscar Javier Forero Bocanegra</h1> <!-- Nombre -->
+            <h3>Ingeniero de Software</h3> <!-- Profesión -->
+            <hr> <!-- Línea separadora -->
+
+            <!-- Enlaces (para pseudoclases CSS) -->
+            <p><strong>LinkedIn:</strong> 
+                <a href="https://linkedin.com" target="_blank">Perfil LinkedIn</a>
+            </p>
+
+            <p><strong>Teléfono:</strong> 
+                <a href="tel:+573134603822">(+57) 3134603822</a>
+            </p>
+
+            <p><strong>Email:</strong> 
+                <a href="mailto:forerooscar715@gmail.com">Enviar correo</a>
+            </p>
+        </div>
+
+        <!-- Imagen de perfil -->
+        <div class="foto">
+            <img src="imagenes/WhatsApp Image 2026-03-10 at 11.36.30 AM.jpeg" alt="Foto de perfil">
+        </div>
+
+    </div>
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <div class="contenido"> <!-- Contenedor en columnas -->
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="izquierda">
+
+            <h3>Experiencia laboral</h3>
+
+            <!-- Lista con estilos CSS -->
+            <ul class="lista-check">
+                <li>Soporte técnico</li>
+                <li>Instalación de sistemas operativos</li>
+                <li>Mantenimiento de equipos</li>
+                <li>Mesa de ayuda</li>
+            </ul>
+
+            <h3>Historial académico</h3>
+
+            <!-- Tabla (TABLAS CSS) -->
+            <table>
+                <caption>Formación Académica</caption> <!-- Título de tabla -->
+
+                <thead>
+                    <tr>
+                        <th>Programa</th>
+                        <th>Institución</th>
+                        <th>Año</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Ingeniería de Software</td>
+                        <td>UDEC</td>
+                        <td>Séptimo semestre</td>
+                    </tr>
+                    <tr>
+                        <td>Técnico en Sistemas</td>
+                        <td>SENA</td>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <td>Instalacion y Mantenimiento de sistemas fotovoltaicos </td>
+                        <td>SENA</td>
+                        <td>2020</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="derecha">
+
+            <h3>Habilidades</h3>
+
+            <!-- Lista normal -->
+            <ul>
+                <li>Hardware y software</li>
+                <li>Redes básicas</li>
+                <li>Soporte remoto</li>
+            </ul>
+
+            <h3>Información adicional</h3>
+            <p>Instalación de sistemas fotovoltaicos</p>
+            <p>Mantenimiento de equipos</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

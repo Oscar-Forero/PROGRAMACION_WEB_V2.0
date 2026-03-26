@@ -1,0 +1,211 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+/* Aplica fuente general y color de fondo */
+body {
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    margin: 0; /* Elimina márgenes del navegador */
+}
+
+/* Contenedor principal */
+.container {
+    width: 800px; /* Ancho fijo */
+    margin: auto; /* Centra horizontalmente */
+    background: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita desbordamiento */
+}
+
+
+/* =========================
+   11. ENLACES CSS
+========================= */
+
+/* Estado normal del enlace */
+a:link {
+    color: white; /* Color blanco */
+    text-decoration: none; /* Quita subrayado */
+}
+
+/* Cuando ya fue visitado */
+a:visited {
+    color: lightgray; /* Color diferente al visitado */
+}
+
+/* Cuando el mouse pasa encima */
+a:hover {
+    color: yellow; /* Cambia color */
+    text-decoration: underline; /* Subraya */
+}
+
+/* Cuando se hace clic */
+a:active {
+    color: red; /* Color al hacer clic */
+}
+
+/* Cuando el enlace tiene foco (teclado) */
+a:focus {
+    outline: 2px dashed yellow; /* Borde visible */
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.header {
+    background-color: #2f6f91; /* Fondo azul */
+    color: white; /* Texto blanco */
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Imagen de perfil */
+.header img {
+    width: 120px; /* Ancho */
+    height: 120px; /* Alto */
+    border-radius: 50%; /* Hace la imagen circular */
+}
+
+
+/* =========================
+   12. LISTAS CSS
+========================= */
+
+/* Lista general */
+ul {
+    list-style-type: square; /* Tipo de viñeta */
+    list-style-position: inside; /* Viñetas dentro */
+    padding-left: 10px; /* Espacio interno */
+}
+
+/* Ejemplo shorthand */
+.lista-check {
+    list-style: circle inside; /* Tipo + posición en una línea */
+}
+
+/* MENÚ HORIZONTAL */
+.menu {
+    list-style: none; /* Quita viñetas */
+    display: flex; /* Acomoda horizontal */
+    background: #333; /* Fondo oscuro */
+}
+
+/* Elementos del menú */
+.menu li {
+    padding: 10px; /* Espaciado */
+}
+
+/* Enlaces del menú */
+.menu li a {
+    color: white; /* Color */
+}
+
+/* Hover en menú */
+.menu li a:hover {
+    background: #555; /* Cambia fondo */
+}
+
+/* MENÚ DROPDOWN */
+.dropdown {
+    position: relative; /* Posición base */
+}
+
+/* Contenido oculto */
+.dropdown-content {
+    display: none; /* Oculto */
+    position: absolute; /* Posición absoluta */
+    background: #eee; /* Fondo */
+}
+
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block; /* Se muestra */
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    display: flex; /* Divide en columnas */
+}
+
+/* Columna izquierda */
+.izquierda {
+    width: 65%; /* Ancho */
+    padding: 20px; /* Espaciado */
+    background: #f9f9f9; /* Color */
+}
+
+/* Columna derecha */
+.derecha {
+    width: 35%; /* Ancho */
+    padding: 20px; /* Espaciado */
+    background: #e6eef2; /* Color */
+}
+
+
+/* =========================
+   13. TABLAS CSS
+========================= */
+
+table {
+    width: 100%; /* Ocupa todo el ancho */
+    border-collapse: collapse; /* Une bordes */
+}
+
+/* Encabezados */
+th {
+    background: #2f6f91; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 10px; /* Espaciado */
+}
+
+/* Celdas */
+td {
+    padding: 10px; /* Espaciado */
+    border: 1px solid #ccc; /* Bordes */
+}
+
+/* Filas alternas */
+tr:nth-child(even) {
+    background: #f4f4f4; /* Color alterno */
+}
+
+/* Caption de tabla */
+caption {
+    caption-side: top; /* Posición arriba */
+    font-weight: bold; /* Negrilla */
+    padding: 10px;
+}
+
+/* Espaciado entre celdas */
+table {
+    border-spacing: 10px; /* Espacio entre celdas */
+}
+
+/* =========================
+   14. COMPATIBILIDAD
+========================= */
+
+/* Prefijos para diferentes navegadores */
+.header {
+    display: -webkit-flex; /* Chrome */
+    display: -moz-flex; /* Firefox antiguo */
+    display: -ms-flexbox; /* Internet Explorer */
+    display: flex; /* Estándar */
+}
+
+/* Ejemplo transform */
+.img {
+    -webkit-transform: scale(1); /* Chrome */
+    -moz-transform: scale(1); /* Firefox */
+    -ms-transform: scale(1); /* IE */
+    transform: scale(1); /* Estándar */
+}
+
