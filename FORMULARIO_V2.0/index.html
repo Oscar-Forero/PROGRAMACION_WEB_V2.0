@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción - Juego Educativo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Formulario de Inscripción</h1>
+        <p>Por favor diligencie sus datos para registrarse.</p>
+        <hr>
+
+        <table class="tabla-info">
+            <caption>Requisitos mínimos del sistema</caption>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Mínimo</th>
+                    <th>Recomendado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Navegador</td>
+                    <td>Chrome / Firefox</td>
+                    <td>Versión más reciente</td>
+                </tr>
+                <tr>
+                    <td>Conexión</td>
+                    <td>5 Mbps</td>
+                    <td>10+ Mbps</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="#" method="POST">
+
+            <h2>Datos Personales</h2>
+
+            <label>Nombres:</label><br>
+            <input type="text" name="nombres" minlength="3" maxlength="64" required>
+            <br><br>
+
+            <label>Apellidos:</label><br>
+            <input type="text" name="apellidos" minlength="3" maxlength="64" required>
+            <br><br>
+
+            <label>Tipo de documento:</label><br>
+            <select name="tipo_documento" required>
+                <option value="">Seleccione...</option>
+                <option value="cc">Cédula de ciudadanía</option>
+                <option value="ti">Tarjeta de identidad</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
+            <br><br>
+
+            <label>Documento de identidad:</label><br>
+            <input type="text" name="documento" pattern="\d{6,15}" required
+                   title="Ingrese solo números, entre 6 y 15 dígitos">
+            <br><br>
+
+            <label>Fecha de inscripción:</label><br>
+            <input type="date" name="fecha_inscripcion" required
+                   min="2026-02-15" max="2026-03-10"
+                   title="Solo fechas entre 15 de febrero y 10 de marzo">
+            <br><br>
+
+            <label>Correo electrónico:</label><br>
+            <input type="email" name="correo" required 
+                   pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                   title="Introduce un correo válido con letras mayúsculas/minúsculas, números y símbolos ._-">
+            <br><br>
+
+            <label>Teléfono fijo:</label><br>
+            <input type="tel" name="telefono_fijo" pattern="\d{7,10}" title="Ingrese solo números, entre 7 y 10 dígitos">
+            <br><br>
+
+            <label>Teléfono celular:</label><br>
+            <input type="tel" name="telefono_celular" pattern="\d{10}" title="Ingrese un número de 10 dígitos">
+            <br><br>
+
+            <label>Usuario:</label><br>
+            <input type="text" name="usuario" required 
+                   pattern="[a-zA-Z]{3,14}[0-9]{0,2}"
+                   title="Usuario: 3-16 letras, opcional 1-2 números al final">
+            <br><br>
+
+            <label>Contraseña:</label><br>
+            <input type="password" name="contraseña" required
+                   pattern="(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*[0-9].*[0-9].*[0-9].*[0-9].*[0-9])(?=.*[!\?\-\+\/&\$\.\,]).{16}"
+                   title="16 caracteres: mínimo 1 mayúscula, mínimo 2 minúsculas, mínimo 5 números, y al menos un símbolo ! ? - + / & $ .">
+            <br><br>
+
+            <label>Dirección:</label><br>
+            <input type="text" name="direccion" required>
+            <br><br>
+
+            <label>Hobbies:</label><br>
+            <input type="text" name="hobbies" placeholder="Ej: leer, deportes, música">
+            <br><br>
+
+            <h3>Conocimiento sobre programación</h3>
+
+            <label>¿Has programado antes?</label><br>
+            <input type="radio" name="programacion" value="si"> Sí<br>
+            <input type="radio" name="programacion" value="no"> No
+            <br><br>
+
+            <label>¿Qué lenguajes conoces?</label><br>
+            <input type="checkbox" name="lenguaje" value="python"> Python<br>
+            <input type="checkbox" name="lenguaje" value="java"> Java<br>
+            <input type="checkbox" name="lenguaje" value="c++"> C++<br>
+            <input type="checkbox" name="lenguaje" value="javascript"> JavaScript<br>
+            <input type="checkbox" name="lenguaje" value="ninguno"> Ninguno
+            <br><br>
+
+            <label>Nivel de conocimiento en Python:</label><br>
+            <select name="nivel_python">
+                <option value="">Seleccione su nivel...</option>
+                <option value="principiante">Principiante</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+            <br><br>
+
+            <h3>Opinión sobre el juego educativo</h3>
+
+            <label>¿Te gustaría aprender Python mediante un juego?</label><br>
+            <input type="radio" name="interes" value="si"> Sí<br>
+            <input type="radio" name="interes" value="no"> No
+            <br><br>
+
+            <label>¿Qué aspectos te gustaría que tuviera el juego?</label><br>
+            <input type="checkbox" name="caracteristicas" value="retos"> Retos de programación<br>
+            <input type="checkbox" name="caracteristicas" value="niveles"> Niveles de dificultad<br>
+            <input type="checkbox" name="caracteristicas" value="puntos"> Sistema de puntos<br>
+            <input type="checkbox" name="caracteristicas" value="historia"> Historia o narrativa<br>
+            <input type="checkbox" name="caracteristicas" value="personajes"> Personajes interactivos
+            <br><br>
+
+            <label>¿Qué tema de Python te gustaría aprender primero?</label><br>
+            <select name="tema_python">
+                <option value="">Seleccione un tema...</option>
+                <option value="variables">Variables</option>
+                <option value="condicionales">Condicionales (if)</option>
+                <option value="bucles">Bucles (for / while)</option>
+                <option value="funciones">Funciones</option>
+                <option value="listas">Listas y estructuras de datos</option>
+            </select>
+            <br><br>
+
+            <label>Comentarios o sugerencias sobre el juego:</label><br>
+            <textarea name="comentarios" rows="5" cols="40" placeholder="Escribe aquí tus ideas..."></textarea>
+            <br><br><br>
+
+            <input type="submit" value="Enviar respuestas">
+            &nbsp;&nbsp;
+            <input type="reset" value="Limpiar formulario">
+
+        </form>
+    </div>
+
+</body>
+</html>
